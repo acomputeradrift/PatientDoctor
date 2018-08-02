@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D686B7121137F4400B574B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B7021137F4400B574B7 /* main.m */; };
+		7D686B7A2113810300B574B7 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B792113810300B574B7 /* Patient.m */; };
+		7D686B7D2113811600B574B7 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B7C2113811600B574B7 /* Doctor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		7D686B6D21137F4400B574B7 /* PatientDoctor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PatientDoctor; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D686B7021137F4400B574B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D686B782113810300B574B7 /* Patient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Patient.h; sourceTree = "<group>"; };
+		7D686B792113810300B574B7 /* Patient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Patient.m; sourceTree = "<group>"; };
+		7D686B7B2113811600B574B7 /* Doctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
+		7D686B7C2113811600B574B7 /* Doctor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
+		7D686B7E211387CE00B574B7 /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +64,12 @@
 		7D686B6F21137F4400B574B7 /* PatientDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				7D686B7E211387CE00B574B7 /* Protocols.h */,
 				7D686B7021137F4400B574B7 /* main.m */,
+				7D686B782113810300B574B7 /* Patient.h */,
+				7D686B792113810300B574B7 /* Patient.m */,
+				7D686B7B2113811600B574B7 /* Doctor.h */,
+				7D686B7C2113811600B574B7 /* Doctor.m */,
 			);
 			path = PatientDoctor;
 			sourceTree = "<group>";
@@ -119,6 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D686B7121137F4400B574B7 /* main.m in Sources */,
+				7D686B7A2113810300B574B7 /* Patient.m in Sources */,
+				7D686B7D2113811600B574B7 /* Doctor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

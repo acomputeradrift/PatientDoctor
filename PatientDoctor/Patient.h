@@ -11,16 +11,15 @@
 
 @interface Patient : NSObject
 
-@property (nonatomic, copy) NSString *name;
+@property NSArray *prescriptions;
+@property (nonatomic) NSString *name;
 @property (nonatomic) int age;
-@property (nonatomic) BOOL hasCard;
+//@property (nonatomic) BOOL hasCard;
 
-- (instancetype)initWithName:(NSString*)name Age:(int)age MedicalCard:(BOOL)hasCard;
-
-
+- (instancetype)initWithName:(NSString*)name Age:(int)age; //MedicalCard:(BOOL)hasCard;
 - (void)visitDoctor: (Doctor*)doctor;
-- (NSString*) requestDocInfo:(NSString*)docName :(NSString*)specialization; //request doc info info
-
-- (void)addToRecords;//add med to database, what is this?
-
+- (BOOL)hasValidHealthCard;
+- (NSArray<NSString*>*)getSymptoms;
+- (NSSet<Prescription*>*)getPrescriptions;
+//---------------------------------
 @end

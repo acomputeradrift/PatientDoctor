@@ -14,34 +14,32 @@
 
 //custom init with name and age
 
-- (instancetype)initWithName:(NSString*)name Age:(int)age MedicalCard:(BOOL)hasCard{
+- (instancetype)initWithName:(NSString*)name Age:(int)age; //MedicalCard:(BOOL)hasCard
+{
     self = [super init];
     if (self) {
         _name = name;
         _age = age;
-        _hasCard = hasCard;
+       // _hasCard = hasCard;
     }
     return self;
 }
 
 - (void)visitDoctor: (Doctor*)doctor{
-    if (doctor.acceptsPatients && self.hasCard == YES){
-      //instance    method     receiver
-        [doctor addToPatientList:self];
-    }else{
-       
+    if ([doctor acceptPatient:self]){
+        [doctor requestMed:self];
     }
 }
-
-
-
-- (void)addToRecords{
-    
+- (BOOL)hasValidHealthCard{
+    return YES;
 }
 
--(NSString *)requestDocInfo:(NSString *)docName :(NSString *)specialization{
-    NSString* docInfo = [docName stringByAppendingString:specialization];
-    return docInfo;
+- (NSArray *)getSymptoms{
+    NSArray *symptoms = @[@"Sore Throat",@"Runny Nose",@"Swollen left foot"];
+    return symptoms;
+}
+- (NSSet<Prescription *> *)getPrescriptions{
+    return nil;
 }
 
 @end

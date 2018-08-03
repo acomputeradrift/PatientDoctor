@@ -15,18 +15,13 @@ int main(int argc, const char * argv[]) {
         
         
         // create instance of doctor with name and specialization @"Doc Smith" Specialization:@"Proctologist"
-        Doctor *quack = [[Doctor alloc] initWithName:@"Doc Smith" Specialization:@"Proctologist" Accepting:YES];
+        Doctor *quack = [[Doctor alloc] initWithName:@"Doc Smith" Specialization:@"Proctologist"];
         
         //create instance of patient with name and specialization @"Mildred" Age:72
-        Patient *hypo = [[Patient alloc] initWithName:@"Mildred" Age:72 MedicalCard:YES];
+        Patient *hypo = [[Patient alloc] initWithName:@"Mildred" Age:72];
+   //called on  method called ?
+        [hypo visitDoctor:quack];
         
-        NSMutableArray *patientArray = [[NSMutableArray alloc] init];
-        
-    
-        
-        
-//        NSLog(@"Doctor: %@ Specialization: %@", [quack name], [quack specialization]);
-//        NSLog(@"Patient: %@ Age: %i", [hypo name], [hypo age]);
     }
     return 0;
 }

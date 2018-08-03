@@ -8,27 +8,50 @@
 
 #import "Doctor.h"
 #import "Patient.h"
+#import "Prescription.h"
+
+@interface Doctor()
+@property NSSet *acceptedPatients;
+@end;
 
 @implementation Doctor
 
 
 //custom init with name and specialization
-- (instancetype)initWithName:(NSString*)name Specialization:(NSString*)specialization Accepting: (BOOL)acceptsPatients;
+- (instancetype)initWithName:(NSString*)name Specialization:(NSString*)specialization //Accepting: (BOOL)acceptsPatients;
 {
     self = [super init];
     if (self) {
         _name = name;
         _specialization = specialization;
-        _acceptsPatients = acceptsPatients;
+        _acceptedPatients = [[NSSet alloc] init];
     }
     return self;
 }
 
-- (void) addToPatientList: (Patient*)patient {
-    [self.patientArray addObject:patient];
+
+- (BOOL)acceptPatient:(Patient *)patient{
+    if ([patient hasValidHealthCard]){
+        self.acceptedPatients = [self.acceptedPatients setByAddingObject:patient];
+        return YES;
+    }
+return NO;
 }
-- (void)requestMed: (Doctor*)doctor{
+
+
+
+- (Prescription*)requestMed: (Patient*)patient{
     
-    //only if on list can request med happen
+    
+    NSArray *symptoms = [patient getSymptoms];
+    Prescription *script = [[Prescription alloc] init];
+    script.patientName = patient.name;
+   // if (symptoms)
+    script.medication = @("Drugs");
+    return script;
 }
+
+
+
+
 @end

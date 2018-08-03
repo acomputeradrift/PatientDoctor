@@ -10,6 +10,7 @@
 		7D686B7121137F4400B574B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B7021137F4400B574B7 /* main.m */; };
 		7D686B7A2113810300B574B7 /* Patient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B792113810300B574B7 /* Patient.m */; };
 		7D686B7D2113811600B574B7 /* Doctor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B7C2113811600B574B7 /* Doctor.m */; };
+		7D686B842113F63A00B574B7 /* Prescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D686B832113F63A00B574B7 /* Prescription.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,8 @@
 		7D686B7B2113811600B574B7 /* Doctor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Doctor.h; sourceTree = "<group>"; };
 		7D686B7C2113811600B574B7 /* Doctor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Doctor.m; sourceTree = "<group>"; };
 		7D686B7E211387CE00B574B7 /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
+		7D686B822113F63A00B574B7 /* Prescription.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prescription.h; sourceTree = "<group>"; };
+		7D686B832113F63A00B574B7 /* Prescription.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prescription.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +73,8 @@
 				7D686B792113810300B574B7 /* Patient.m */,
 				7D686B7B2113811600B574B7 /* Doctor.h */,
 				7D686B7C2113811600B574B7 /* Doctor.m */,
+				7D686B822113F63A00B574B7 /* Prescription.h */,
+				7D686B832113F63A00B574B7 /* Prescription.m */,
 			);
 			path = PatientDoctor;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 				7D686B7121137F4400B574B7 /* main.m in Sources */,
 				7D686B7A2113810300B574B7 /* Patient.m in Sources */,
 				7D686B7D2113811600B574B7 /* Doctor.m in Sources */,
+				7D686B842113F63A00B574B7 /* Prescription.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

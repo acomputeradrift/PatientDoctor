@@ -20,6 +20,7 @@
     if (self) {
         _name = name;
         _age = age;
+        _prescriptions = [[NSMutableArray alloc] init];
        // _hasCard = hasCard;
     }
     return self;
@@ -27,7 +28,7 @@
 
 - (void)visitDoctor: (Doctor*)doctor{
     if ([doctor acceptPatient:self]){
-        [doctor requestMed:self];
+        NSLog (@"You require the best solution: lots of %@", [doctor requestMed:self].medication);
         
     }
 }
@@ -39,6 +40,7 @@
 - (NSArray *)getSymptoms{
     NSLog (@"Get symptoms");
     NSArray *symptoms = @[@"Sore Throat",@"Runny Nose",@"Swollen left foot"];
+    
     return symptoms;
 }
 - (NSSet<Prescription *> *)getPrescriptions{

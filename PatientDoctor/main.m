@@ -24,10 +24,7 @@ int main(int argc, const char * argv[]) {
    //called on  method called ?
         NSLog (@"Patient visits doctor");
         [hypo visitDoctor:quack];
-        
 
-        
-        
     }
     return 0;
 }

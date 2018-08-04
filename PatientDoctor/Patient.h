@@ -11,7 +11,7 @@
 
 @interface Patient : NSObject
 
-@property NSArray *prescriptions;
+@property NSMutableArray *prescriptions;
 @property (nonatomic) NSString *name;
 @property (nonatomic) int age;
 //@property (nonatomic) BOOL hasCard;

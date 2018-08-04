@@ -45,12 +45,14 @@ return NO;
 - (Prescription*)requestMed: (Patient*)patient{
     
     NSLog (@"Request med");
-    NSArray *symptoms = [patient getSymptoms];
+    NSLog (@"The symptoms are %@", [patient getSymptoms]);
     Prescription *script = [[Prescription alloc] init];
     //custom init with name and if statement for med
     script.patientName = patient.name;
    // if (symptoms) = @"blah blah blah"
-    script.medication = @("Drugs");
+    script.medication = @("drugs");
+    [patient.prescriptions addObject:script]; //load presciption object into property prescriptions
+    NSLog (@"%@ added to your history of prescriptions.", script.medication);
     return script;
 }
 

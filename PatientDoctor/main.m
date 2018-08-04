@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Patient.h"
 #import "Doctor.h"
+#import "Prescription.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -19,8 +20,13 @@ int main(int argc, const char * argv[]) {
         
         //create instance of patient with name and specialization @"Mildred" Age:72
         Patient *hypo = [[Patient alloc] initWithName:@"Mildred" Age:72];
+        
    //called on  method called ?
+        NSLog (@"Patient visits doctor");
         [hypo visitDoctor:quack];
+        
+
+        
         
     }
     return 0;

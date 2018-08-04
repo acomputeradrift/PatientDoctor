@@ -28,17 +28,23 @@
 - (void)visitDoctor: (Doctor*)doctor{
     if ([doctor acceptPatient:self]){
         [doctor requestMed:self];
+        
     }
 }
 - (BOOL)hasValidHealthCard{
+    NSLog (@"Patient has health card");
     return YES;
 }
 
 - (NSArray *)getSymptoms{
+    NSLog (@"Get symptoms");
     NSArray *symptoms = @[@"Sore Throat",@"Runny Nose",@"Swollen left foot"];
     return symptoms;
 }
 - (NSSet<Prescription *> *)getPrescriptions{
+    
+    // get prescription object and return NString
+    
     return nil;
 }
 

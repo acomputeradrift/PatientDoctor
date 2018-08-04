@@ -33,8 +33,10 @@
 - (BOOL)acceptPatient:(Patient *)patient{
     if ([patient hasValidHealthCard]){
         self.acceptedPatients = [self.acceptedPatients setByAddingObject:patient];
+        NSLog (@"Patient accepted, added to doctor records");
         return YES;
     }
+    NSLog (@"Patient not accepted, not added to doctor records");
 return NO;
 }
 
@@ -42,11 +44,12 @@ return NO;
 
 - (Prescription*)requestMed: (Patient*)patient{
     
-    
+    NSLog (@"Request med");
     NSArray *symptoms = [patient getSymptoms];
     Prescription *script = [[Prescription alloc] init];
+    //custom init with name and if statement for med
     script.patientName = patient.name;
-   // if (symptoms)
+   // if (symptoms) = @"blah blah blah"
     script.medication = @("Drugs");
     return script;
 }
